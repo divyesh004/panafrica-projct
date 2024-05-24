@@ -31,24 +31,6 @@ function SignleCard(image, price, tittle,id) {
   return card;
 }
 
-/* let high=document.querySelector(".high")
-console.log(high)
-high=document.addEventListener("click",()=>{
-    let sortdata=productdata.sort((a,b)=>b.price-a.price)
-    CardList(sortdata)
-    console.log(sortdata)
-})
-
-let low=document.querySelector(".low")
-console.log(low)
-low=document.addEventListener("click",()=>{
-    let sum=productdata.sort((a,b)=>a.price-b.price)
-    CardList(sum)
-    console.log()
-})
-
-
- */
 
 let dataformAtlas = new URLSearchParams(window.location.search)
 window.addEventListener("load", () => {
@@ -94,7 +76,7 @@ bag.addEventListener("click",(event)=>{
   if(event.target.classList.contains("add-card-button")){
     let id=event.target.dataset.id
     console.log(id);
-    fetch(`ttps://panfrica-server-16.onrender.com/ATLAS/${id}`)
+    fetch(`https://panfrica-server-16.onrender.com/ATLAS/${id}`)
     .then((res)=>res.json())
     .then((data)=>{
 
